@@ -1,6 +1,6 @@
 /*
- * (C) Copyright 2003
- * Kyle Harris, kharris@nexus-tech.net
+ * (C) Copyright 2001
+ * Wolfgang Denk, DENX Software Engineering, wd@denx.de.
  *
  * See file CREDITS for list of people who contributed to this
  * project.
@@ -21,26 +21,36 @@
  * MA 02111-1307 USA
  */
 
+/*
+ * RTC, Date & Time support: get and set date & time
+ */
 #include <common.h>
 #include <command.h>
+#include <rtc.h>
 
-#if (CONFIG_COMMANDS & CFG_CMD_MMC)
+DECLARE_GLOBAL_DATA_PTR;
 
-#include <mmc.h>
+#if 1
 
-int do_mmc (cmd_tbl_t *cmdtp, int flag, int argc, char *argv[])
+
+int do_mycmd (cmd_tbl_t *cmdtp, int flag, int argc, char *argv[])
 {
-	if (mmc_init (1) != 0) {
-		printf ("No MMC card found\n");
-		return 1;
-	}
-	return 0;
+	int rcode = 0;
+
+	puts("add mycmd...\n");
+	return rcode;
 }
 
+
+/***************************************************/
+
 U_BOOT_CMD(
-	mmcinit,	1,	0,	do_mmc,
-	"mmcinit - init mmc card\n",
-	NULL
+	mycmd,	2,	1,	do_mycmd,
+	"date    - get/set/reset date & time\n",
+	"[MMDDhhmm[[CC]YY][.ss]]\ndate reset\n"
+	"  - without arguments: print date & time\n"
+	"  - with numeric argument: set the system date & time\n"
+	"  - with 'reset' argument: reset the RTC\n"
 );
 
-#endif	/* CFG_CMD_MMC */
+#endif	/* CFG_CMD_DATE */

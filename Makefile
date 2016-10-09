@@ -158,6 +158,10 @@ endif
 endif
 endif
 
+CROSS_COMPILE = /opt/opt/arm-2014.05/bin/arm-none-linux-gnueabi-
+
+ARCH = arm
+
 export	CROSS_COMPILE
 
 # load other configuration

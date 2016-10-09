@@ -555,6 +555,7 @@ int do_saveenv (cmd_tbl_t *cmdtp, int flag, int argc, char *argv[])
 	return (saveenv() ? 1 : 0);
 }
 
+
 #endif
 
 
@@ -612,6 +613,7 @@ U_BOOT_CMD(
 	"saveenv - save environment variables to persistent storage\n",
 	NULL
 );
+
 #endif	/* CFG_CMD_ENV */
 
 #if (CONFIG_COMMANDS & CFG_CMD_ASKENV)

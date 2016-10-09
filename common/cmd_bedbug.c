@@ -246,8 +246,7 @@ void bedbug_main_loop (unsigned long addr, struct pt_regs *regs)
 			flag |= CMD_FLAG_REPEAT;
 
 		if (len == -1)
-			printf ("\n");
-			//printf ("<INTERRUPT>\n");
+			printf ("<INTERRUPT>\n");
 		else
 			rc = run_command (lastcommand, flag);
 

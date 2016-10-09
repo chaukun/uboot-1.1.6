@@ -482,8 +482,7 @@ void main_loop (void)
 #endif
 
 		if (len == -1)
-			puts ("\n");
-			//puts ("<INTERRUPT>\n");
+			puts ("<INTERRUPT>\n");
 		else
 			rc = run_command (lastcommand, flag);
 

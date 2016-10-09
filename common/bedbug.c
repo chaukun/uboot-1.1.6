@@ -1,4 +1,4 @@
-/* $Id: bedbug.c,v 1.1.1.1 2006/12/06 00:22:14 scsuh Exp $ */
+/* $Id$ */
 
 #include <common.h>
 

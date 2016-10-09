@@ -372,3 +372,7 @@ mmu_table:
 
 #endif
 
+.globl raise
+raise:
+	nop
+	mov pc, lr

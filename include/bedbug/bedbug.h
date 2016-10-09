@@ -1,4 +1,4 @@
-/* $Id: bedbug.h,v 1.1.1.1 2006/12/06 00:22:13 scsuh Exp $ */
+/* $Id$ */
 
 #ifndef _BEDBUG_H
 #define _BEDBUG_H
